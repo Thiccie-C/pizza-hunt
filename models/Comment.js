@@ -12,6 +12,7 @@ const ReplySchema = new Schema(
       type: String
     },
     writtenBy: {
+      required: true,
       type: String
     },
     createdAt: {
@@ -30,7 +31,8 @@ const ReplySchema = new Schema(
 const CommentSchema = new Schema(
   {
     writtenBy: {
-      type: String
+      type: String,
+      required: true
     },
     commentBody: {
       type: String
